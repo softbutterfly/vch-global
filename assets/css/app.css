@@ -142,11 +142,6 @@ body {
 }
 
 /* -----------------------------------------------------------------------------
-Nav-bar
-.nav-bar
------------------------------------------------------------------------------ */
-
-/* -----------------------------------------------------------------------------
 Header Section
 ----------------------------------------------------------------------------- */
 .header-section {
@@ -229,9 +224,55 @@ Service Section
 .service-card .service-card-title {
 }
 
-/**
-* Color helpers
-*/
+/* -----------------------------------------------------------------------------
+Service Section
+----------------------------------------------------------------------------- */
+.service-page .service-detail {
+  margin: 8rem 0;
+}
+
+.service-page .service-detail:first-child,
+.service-page .service-detail:last-child {
+  margin-top: 0;
+}
+
+.service-text {
+  order: 1;
+}
+
+.service-flipped .service-text {
+  order: 2;
+}
+
+.service-image {
+  order: 2;
+}
+
+.service-flipped .service-image {
+  order: 1;
+}
+
+@media screen and (min-width: 40em) {
+  .service-text {
+    order: 2;
+  }
+
+  .service-flipped .service-text {
+    order: 1;
+  }
+
+  .service-image {
+    order: 1;
+  }
+
+  .service-flipped .service-image {
+    order: 2;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+Helpers
+----------------------------------------------------------------------------- */
 .with-centered-barckground {
   background-position: center;
   background-size: cover;
