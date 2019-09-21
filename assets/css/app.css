@@ -334,3 +334,7 @@ Helpers
 .libre-franklin {
   font-family: "Libre Franklin", sans-serif !important;
 }
+
+.upper-case {
+  text-transform: uppercase;
+}
