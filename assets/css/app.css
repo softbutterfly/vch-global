@@ -83,16 +83,6 @@ body {
   }
 }
 
-.page-footer .social-network {
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-}
-
 .section {
   position: relative;
   padding: 80px 0;
@@ -139,6 +129,16 @@ body {
 .section .section-title {
   text-transform: uppercase;
   font-weight: 900;
+}
+
+.social-network {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 /* -----------------------------------------------------------------------------
@@ -280,6 +280,23 @@ Project Sections
   height: 400px;
 }
 
+/* -----------------------------------------------------------------------------
+Contact Sections
+----------------------------------------------------------------------------- */
+.contact-section .contact-form input {
+  border-color: #e6e6e6;
+  background-color: #e6e6e6;
+  box-shadow: none;
+}
+
+.contact-section .contact-details {
+  border: 2px solid #387a77;
+  border-radius: 4px;
+}
+
+.contact-section .contact-details .divider {
+  border: 1px solid #387a77;
+}
 /* -----------------------------------------------------------------------------
 Helpers
 ----------------------------------------------------------------------------- */
