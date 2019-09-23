@@ -430,6 +430,7 @@ Contact Sections
   border-color: #e6e6e6;
   background-color: #e6e6e6;
   box-shadow: none;
+  resize: none;
 }
 
 .contact-section .contact-details {

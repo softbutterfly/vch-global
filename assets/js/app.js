@@ -183,4 +183,9 @@ $(document).ready(function () {
     window.addEventListener('resize', updateCutSize, false);
     window.addEventListener('resize', updateNavbarBackground, false);
     window.addEventListener('scroll', updateNavbarBackground, false);
+
+    $('#casacor-modal').foundation('open');
+    // window.addEventListener('load', function () {
+    //     console.log("popup")
+    // })
 })
