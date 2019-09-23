@@ -425,7 +425,8 @@ Project Sections
 /* -----------------------------------------------------------------------------
 Contact Sections
 ----------------------------------------------------------------------------- */
-.contact-section .contact-form input {
+.contact-section .contact-form input,
+.contact-section .contact-form textarea {
   border-color: #e6e6e6;
   background-color: #e6e6e6;
   box-shadow: none;
