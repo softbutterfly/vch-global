@@ -1,6 +1,73 @@
-body {
-  font-family: "Libre Franklin", sans-serif;
+@font-face {
+  font-family: "Franklin";
+  src: url("../fonts/ITC-Franklin-Gothic-STD/ITCFranklinGothicStd-Book.otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: "Franklin";
+  src: url("../fonts/ITC-Franklin-Gothic-STD/ITCFranklinGothicStd-Demi.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Franklin";
+  src: url("../fonts/ITC-Franklin-Gothic-STD/ITCFranklinGothicStd-Hvy.otf");
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ebrima";
+  src: url("../fonts/Ebrima/ebrima.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ebrima";
+  src: url("../fonts/Ebrima/ebrima-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+*,
+*:focus,
+*:active {
+  outline: none;
+}
+
+body {
+  font-family: "Franklin", "Libre Franklin", sans-serif;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Franklin", "Libre Franklin", sans-serif;
+}
+
 .page-wrapper,
 .page {
   width: 100%;
@@ -378,6 +445,14 @@ Service Section
   margin-top: 0;
 }
 
+.service-number {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 0rem;
+  color: #ffffff;
+  text-shadow: -1px -1px 0 #387a77, 1px -1px 0 #387a77, -1px 1px 0 #387a77,
+    1px 1px 0 #387a77;
+}
 .service-text {
   order: 1;
 }
@@ -493,8 +568,12 @@ Helpers
   font-weight: 900;
 }
 
-.libre-franklin {
-  font-family: "Libre Franklin", sans-serif !important;
+.franklin {
+  font-family: "Franklin", "Libre Franklin", sans-serif !important;
+}
+
+.franklin {
+  font-family: "Ebrima", "Franklin", "Libre Franklin", sans-serif !important;
 }
 
 .upper-case {
