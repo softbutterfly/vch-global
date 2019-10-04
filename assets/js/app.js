@@ -84,82 +84,84 @@ $(document).ready(function () {
                 return holder;
             }
 
-            var map = AmCharts.makeChart("projects-map", {
-                "type": "map",
-                "theme": "light",
-                "projection": "miller",
+            if (window.AmCharts) {
+                var map = AmCharts.makeChart("projects-map", {
+                    "type": "map",
+                    "theme": "light",
+                    "projection": "miller",
 
-                "dataProvider": {
-                    "map": "worldLow",
-                    "getAreasFromMap": false,
-                    "images": [
-                        {
-                            // "type": "circle",
-                            "label": "Canada",
-                            "longitude": -117.0727,
-                            "latitude": 62.831
-                        },
-                        {
-                            // "type": "circle",
-                            "label": "Bahamas",
-                            "longitude": -80.7916,
-                            "latitude": 24.0365
-                        },
-                        {
-                            // "type": "circle",
-                            "label": "Spain",
-                            "longitude": -6.4548,
-                            "latitude": 43.4518
-                        },
-                        {
-                            // "type": "circle",
-                            "label": "Italy",
-                            "longitude": 14.5305,
-                            "latitude": 40.982
-                        },
-                        {
-                            // "type": "circle",
-                            "label": "Hong Kong",
-                            "longitude": 114.15769,
-                            "latitude": 22.28552
-                        },
-                        {
-                            // "type": "circle",
-                            "label": "Singapore",
-                            "longitude": 103.851959,
-                            "latitude": 1.290270
-                        }
-                    ]
-                },
+                    "dataProvider": {
+                        "map": "worldLow",
+                        "getAreasFromMap": false,
+                        "images": [
+                            {
+                                // "type": "circle",
+                                "label": "Canada",
+                                "longitude": -117.0727,
+                                "latitude": 62.831
+                            },
+                            {
+                                // "type": "circle",
+                                "label": "Bahamas",
+                                "longitude": -80.7916,
+                                "latitude": 24.0365
+                            },
+                            {
+                                // "type": "circle",
+                                "label": "Spain",
+                                "longitude": -6.4548,
+                                "latitude": 43.4518
+                            },
+                            {
+                                // "type": "circle",
+                                "label": "Italy",
+                                "longitude": 14.5305,
+                                "latitude": 40.982
+                            },
+                            {
+                                // "type": "circle",
+                                "label": "Hong Kong",
+                                "longitude": 114.15769,
+                                "latitude": 22.28552
+                            },
+                            {
+                                // "type": "circle",
+                                "label": "Singapore",
+                                "longitude": 103.851959,
+                                "latitude": 1.290270
+                            }
+                        ]
+                    },
 
-                "areasSettings": {
-                    "unlistedAreasAlpha": 1,
-                    "unlistedAreasColor": "#ffffff",
-                    "unlistedAreasOutlineAlpha": 1,
-                    "unlistedAreasOutlineColor": "#e6e6e6",
-                    "outlineAlpha": 1,
-                    "outlineColor": "#e6e6e6",
-                    "outlineThickness": 1,
-                    "color": "#ffffff",
-                    "alpha": 1
-                },
+                    "areasSettings": {
+                        "unlistedAreasAlpha": 1,
+                        "unlistedAreasColor": "#ffffff",
+                        "unlistedAreasOutlineAlpha": 1,
+                        "unlistedAreasOutlineColor": "#e6e6e6",
+                        "outlineAlpha": 1,
+                        "outlineColor": "#e6e6e6",
+                        "outlineThickness": 1,
+                        "color": "#ffffff",
+                        "alpha": 1
+                    },
 
-                "smallMap": false,
-                "export": false,
-                "chartContainer": {
-                    "wheelable": false
-                },
-                "zoomControl": {
-                    "zoomControlEnabled": false,
-                    "homeButtonEnabled": false
-                },
-                "mouseWheelZoomEnabled": false,
-                "zoomOnDoubleClick": false,
-                "listeners": [{
-                    "event": "positionChanged",
-                    "method": updateCustomMarkers
-                }]
-            });
+                    "smallMap": false,
+                    "export": false,
+                    "chartContainer": {
+                        "wheelable": false
+                    },
+                    "zoomControl": {
+                        "zoomControlEnabled": false,
+                        "homeButtonEnabled": false
+                    },
+                    "mouseWheelZoomEnabled": false,
+                    "zoomOnDoubleClick": false,
+                    "listeners": [{
+                        "event": "positionChanged",
+                        "method": updateCustomMarkers
+                    }]
+                });
+            }
         }
     }
     $(document).foundation();
