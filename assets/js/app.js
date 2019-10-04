@@ -70,12 +70,11 @@ $(document).ready(function () {
             function createCustomMarker(image) {
                 // Create chart container
                 var holder = document.createElement("div");
-                holder.id = image.id;
-                holder.title = image.title;
-                holder.style.position = "absolute";
-                holder.style.width = image.width + "px";
-                holder.style.height = image.height + "px";
+                holder.id = image.label;
+                holder.title = image.label;
                 holder.classList.add('map-marker');
+                holder.classList.add('green');
+
                 // Append the chart container to the map container
                 image.chart.chartDiv.appendChild(holder);
 
@@ -95,37 +94,37 @@ $(document).ready(function () {
                     "getAreasFromMap": false,
                     "images": [
                         {
-                            "type": "circle",
+                            // "type": "circle",
                             "label": "Canada",
                             "longitude": -117.0727,
                             "latitude": 62.831
                         },
                         {
-                            "type": "circle",
+                            // "type": "circle",
                             "label": "Bahamas",
                             "longitude": -80.7916,
                             "latitude": 24.0365
                         },
                         {
-                            "type": "circle",
+                            // "type": "circle",
                             "label": "Spain",
                             "longitude": -6.4548,
                             "latitude": 43.4518
                         },
                         {
-                            "type": "circle",
+                            // "type": "circle",
                             "label": "Italy",
                             "longitude": 14.5305,
                             "latitude": 40.982
                         },
                         {
-                            "type": "circle",
+                            // "type": "circle",
                             "label": "Hong Kong",
                             "longitude": 114.15769,
                             "latitude": 22.28552
                         },
                         {
-                            "type": "circle",
+                            // "type": "circle",
                             "label": "Singapore",
                             "longitude": 103.851959,
                             "latitude": 1.290270
@@ -156,12 +155,10 @@ $(document).ready(function () {
                 },
                 "mouseWheelZoomEnabled": false,
                 "zoomOnDoubleClick": false,
-                /*
                 "listeners": [{
                     "event": "positionChanged",
                     "method": updateCustomMarkers
                 }]
-                */
             });
         }
     }

@@ -63,6 +63,25 @@
       format("woff");
 }
 
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale3d(5, 5, 5);
+    opacity: 0;
+  }
+
+  /*
+  to {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  */
+}
+
 *,
 *:focus,
 *:active {
@@ -520,6 +539,24 @@ Project Sections
   height: 400px;
 }
 
+.projects-section .map-marker {
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: show;
+}
+
+.projects-section .map-marker::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #387a77;
+  animation: pulse 2s infinite;
+}
 /* -----------------------------------------------------------------------------
 Contact Sections
 ----------------------------------------------------------------------------- */
