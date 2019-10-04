@@ -640,3 +640,7 @@ Helpers
 .lower-case {
   text-transform: none;
 }
+
+a[title="Interactive JavaScript maps"] {
+  display: none;
+}
