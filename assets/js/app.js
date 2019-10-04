@@ -184,8 +184,9 @@ $(document).ready(function () {
     window.addEventListener('resize', updateNavbarBackground, false);
     window.addEventListener('scroll', updateNavbarBackground, false);
 
-    $('#casacor-modal').foundation('open');
-    // window.addEventListener('load', function () {
-    //     console.log("popup")
-    // })
+    var casacorLastDay = new Date(2019, 10, 03);
+    var today = new Date();
+    if (today <= casacorLastDay) {
+        $('#casacor-modal').foundation('open');
+    }
 })

@@ -43,6 +43,26 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "GrutchGrotesk";
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: expanded;
+  font-display: swap;
+  src: local("GrutchGrotesk Condensed Light"),
+    url("../fonts/GrutchGrotesk/GrutchGrotesk-CondensedLight.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "GrutchGrotesk Shaded";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GrutchGroteskShaded Condensed Light"),
+    url("../fonts/GrutchGrotesk/GrutchGroteskShaded-CondensedLight.woff")
+      format("woff");
+}
+
 *,
 *:focus,
 *:active {
@@ -50,7 +70,9 @@
 }
 
 body {
-  font-family: "Franklin", "Libre Franklin", sans-serif;
+  /* font-family: "Franklin", "Libre Franklin", sans-serif; */
+  font-family: "GrutchGrotesk", sans-serif;
+  letter-spacing: 1px;
 }
 
 .h1,
@@ -65,7 +87,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Franklin", "Libre Franklin", sans-serif;
+  /* font-family: "Franklin", "Libre Franklin", sans-serif; */
+  font-family: "GrutchGrotesk", sans-serif;
 }
 
 .page-wrapper,
@@ -572,8 +595,12 @@ Helpers
   font-family: "Franklin", "Libre Franklin", sans-serif !important;
 }
 
-.franklin {
-  font-family: "Ebrima", "Franklin", "Libre Franklin", sans-serif !important;
+.ebrima {
+  font-family: "Ebrima", sans-serif !important;
+}
+
+.grutch-grotesk {
+  font-family: "GrutchGrotesk", sans-serif !important;
 }
 
 .upper-case {
