@@ -493,7 +493,7 @@ Service Section
 }
 
 .service-flipped .service-text {
-  order: 2;
+  order: 1;
 }
 
 .service-image {
@@ -501,7 +501,7 @@ Service Section
 }
 
 .service-flipped .service-image {
-  order: 1;
+  order: 2;
 }
 
 @media screen and (min-width: 40em) {
@@ -635,4 +635,8 @@ Helpers
 
 .upper-case {
   text-transform: uppercase;
+}
+
+.lower-case {
+  text-transform: none;
 }
