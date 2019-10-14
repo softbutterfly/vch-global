@@ -196,7 +196,7 @@ $(document).ready(function () {
 
     var casacorLastDay = new Date(2019, 10, 03);
     var today = new Date();
-    // if (today <= casacorLastDay) {
-    //     $('#casacor-modal').length && $('#casacor-modal').foundation('open');
-    // }
+    if (today <= casacorLastDay) {
+        $('#casacor-modal').length && $('#casacor-modal').foundation('open');
+    }
 })
