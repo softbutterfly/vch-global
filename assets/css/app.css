@@ -683,5 +683,5 @@ Helpers
 }
 
 a[title="Interactive JavaScript maps"] {
-  display: none;
+  display: none!important;
 }

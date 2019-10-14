@@ -145,6 +145,7 @@ $(document).ready(function () {
                     },
 
                     "smallMap": false,
+                    "dragMap": false,
                     "export": false,
                     "chartContainer": {
                         "wheelable": false
