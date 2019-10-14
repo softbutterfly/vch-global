@@ -387,6 +387,7 @@ Header Section
 ----------------------------------------------------------------------------- */
 .header-section {
   padding: 0;
+  height: calc(100vh + 43px);
 }
 
 .header-text {
@@ -402,13 +403,12 @@ Header Section
 }
 
 .header-logo {
-  opacity: 0.75;
   text-shadow: 0px 0px 5px #212121;
   /* text-shadow: -1px -1px 6px #212121, 1px -1px 6px #212121, -1px 1px 6px #212121, 1px 1px 6px #212121; */
 }
 .header-carousel.owl-carousel .item {
   width: 100%;
-  height: calc(100vh - 40px);
+  height: calc(100vh + 43px);
   min-height: 200px;
 }
 
