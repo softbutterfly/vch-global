@@ -387,7 +387,7 @@ Header Section
 ----------------------------------------------------------------------------- */
 .header-section {
   padding: 0;
-  height: calc(100vh + 43px);
+  height: 400px;
 }
 
 .header-text {
@@ -406,6 +406,11 @@ Header Section
   text-shadow: 0px 0px 5px #212121;
   /* text-shadow: -1px -1px 6px #212121, 1px -1px 6px #212121, -1px 1px 6px #212121, 1px 1px 6px #212121; */
 }
+
+.header-section.section-carousel {
+  height: calc(100vh + 43px);
+}
+
 .header-carousel.owl-carousel .item {
   width: 100%;
   height: calc(100vh + 43px);
