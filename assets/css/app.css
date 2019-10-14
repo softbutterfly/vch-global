@@ -401,14 +401,19 @@ Header Section
   line-height: 1.1;
 }
 
+.header-logo {
+  opacity: 0.75;
+  text-shadow: 0px 0px 5px #212121;
+  /* text-shadow: -1px -1px 6px #212121, 1px -1px 6px #212121, -1px 1px 6px #212121, 1px 1px 6px #212121; */
+}
 .header-carousel.owl-carousel .item {
   width: 100%;
-  height: calc(100vh + 80px);
+  height: calc(100vh - 40px);
   min-height: 200px;
 }
 
 .header-carousel.owl-carousel .owl-dots {
-  margin: 0;
+  margin: 0!important;
   position: absolute;
   right: 0;
   width: 40px;
@@ -447,7 +452,14 @@ About Section
 Paralax Section
 ----------------------------------------------------------------------------- */
 .parallax-section {
-  height: 75vh;
+  height: 80vh;
+  transition: background-image 0.5s ease-in-out;
+  background-image: url('../images/fondo_paralax_1.jpg');
+  background-attachment: fixed;
+}
+
+.parallax-section:hover {
+  background-image: url('../images/fondo_paralax_2.jpg');
 }
 
 /* -----------------------------------------------------------------------------
@@ -561,6 +573,12 @@ Contact Sections
   resize: none;
 }
 
+.contact-section .contact-form input::placeholder,
+.contact-section .contact-form textarea::placeholder {
+  color: #424242;
+  letter-spacing: 1px;
+}
+
 .contact-section .contact-details {
   border: 2px solid #387a77;
   border-radius: 4px;
@@ -568,6 +586,24 @@ Contact Sections
 
 .contact-section .contact-details .divider {
   border: 1px solid #387a77;
+}
+
+.contact-section .image-holder {
+  position: relative;
+}
+
+.contact-section .logo-holder {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.contact-section .logo-holder img {
+  display: block;
+}
+
+.contact-section .logo-holder img ~ img {
+  margin-top: 1rem;
 }
 
 /* -----------------------------------------------------------------------------

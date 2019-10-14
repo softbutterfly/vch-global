@@ -88,12 +88,18 @@
             <section class="section header-section blue">
                 <div class="header-carousel owl-carousel owl-theme">
                     <div class="item with-centered-barckground"
-                        style="background-image: url('./assets/images/slider_uno.jpg'); background-position: left center;">
+                        style="background-image: url('./assets/images/home.png');">
                     </div>
-                    <div class="item with-centered-barckground"
-                        style="background-image: url('./assets/images/slider_dos.jpg')"></div>
+                    <!--
+                        <div class="item with-centered-barckground"
+                            style="background-image: url('./assets/images/slider_uno.jpg'); background-position: left center;">
+                        </div>
+                        <div class="item with-centered-barckground"
+                            style="background-image: url('./assets/images/slider_dos.jpg')">
+                        </div>
+                    -->
                 </div>
-                <div class="header-text text-center white--text">
+                <div class="header-text header-logo text-center white--text">
                     <h1 class="margin-bottom-0 font-black">V & CH</h1>
                     <h1 class="margin-bottom-1 font-black">GLOBAL</h1>
                     <h4 class="margin-bottom-0 font-bold">Marine and Civil Architectural Solutions</h4>
@@ -145,8 +151,7 @@
                 </div>
                 <div class="lower-cut"></div>
             </section>
-            <section class="section parallax-section upper-space lower-space parallax-window" data-parallax="scroll"
-                data-image-src="./assets/images/fondo_paralax.jpg">
+            <section class="section parallax-section with-centered-barckground upper-space lower-space parallax-window">
             </section>
             <section class="section service-section">
                 <div class="upper-cut"></div>
@@ -339,8 +344,12 @@
             <div class="grid-container padding-vertical-0 padding-horizontal-0">
                 <div class="grid-x">
                     <div class="cell small-12 medium-6">
-                        <div class="with-centered-barckground"
+                        <div class="image-holder with-centered-barckground"
                             style="background-image: url('./assets/images/casa_corp.jpg'); width: 100%; height: 100%; min-height: 400px;">
+                            <div class="logo-holder">
+                                <img src="./assets/images/casa_corp_logo_casacorp.png" alt="CasaCor">
+                                <img src="./assets/images/casa_corp_logo_vch.png" alt="V&CH">
+                            </div>
                         </div>
                     </div>
                     <div class="cell small-12 medium-6 padding-horizontal-2">
@@ -359,29 +368,29 @@
                                     </button>
                                 </div>
                                 <div class="cell small-12">
-                                    <label>Name
-                                        <input type="text" name="name" class="padding-horizontal-2" required />
-                                    </label>
+                                    <input type="text" name="name" class="padding-horizontal-2" required placeholder="Name"/>
+                                    <!--label>Name
+                                    </label-->
                                 </div>
                                 <div class="cell small-12">
-                                    <label>Company
-                                        <input type="text" name="company" class="padding-horizontal-2" required />
-                                    </label>
+                                    <input type="text" name="company" class="padding-horizontal-2" required placeholder="Company"/>
+                                    <!--label>Company
+                                    </label-->
                                 </div>
                                 <div class="cell small-12">
-                                    <label>Cellphone
-                                        <input type="text" name="phone" class="padding-horizontal-2" required />
-                                    </label>
+                                    <input type="text" name="phone" class="padding-horizontal-2" required placeholder="Cellphone"/>
+                                    <!--label>Cellphone
+                                    </label-->
                                 </div>
                                 <div class="cell small-12">
-                                    <label>Email
-                                        <input type="email" name="email" class="padding-horizontal-2" required />
-                                    </label>
+                                    <input type="email" name="email" class="padding-horizontal-2" required placeholder="Email"/>
+                                    <!--label>Email
+                                    </label-->
                                 </div>
                                 <div class="cell small-12">
-                                    <label>Message
-                                        <textarea name="message" rows="5" class="padding-horizontal-2"></textarea>
-                                    </label>
+                                    <textarea name="message" rows="5" class="padding-horizontal-2" required placeholder="Message"></textarea>
+                                    <!-- label>Message
+                                    </label -->
                                 </div>
                                 <div class="cell small-12">
                                     <button type="submit" class="button green display-block upper-case width-100">
@@ -404,7 +413,6 @@
 
     <script src="./assets/js/vendor/jquery.js"></script>
     <script src="./assets/owl-carousel/owl.carousel.min.js"></script>
-    <script src="./assets/js/parallax.min.js"></script>
     <script src="./assets/js/vendor/foundation.min.js"></script>
     <script src="./assets/js/vendor/what-input.js"></script>
     <script src="./assets/js/app.js"></script>
