@@ -34,7 +34,7 @@ JSON.stringify(languages);
         },
         "AboutUs": {
             "en": "About Us",
-            "es": "¿Quiénes somos?"
+            "es": "¿Quiénes<br/>somos?"
         },
         "FullService": {
             "en": "FULL SERVICE CONTRACTOR IN MARINE AND CIVIL ARCHITECTURAL SOLUTIONS",
@@ -61,8 +61,8 @@ JSON.stringify(languages);
             "es": "Puntualidad"
         },
         "OurServices": {
-            "en": "Our services",
-            "es": "Nuestros Servicios"
+            "en": "Our<br/>services",
+            "es": "Nuestros<br/>Servicios"
         },
         "ServicesDe": {
             "en": "Design and building",
@@ -89,8 +89,8 @@ JSON.stringify(languages);
             "es": "Consultoría"
         },
         "OurProjects": {
-            "en": "Our projects",
-            "es": "Nuestros Proyectos"
+            "en": "Our<br/>projects",
+            "es": "Nuestros<br/>Proyectos"
         },
         "LeerMas": {
             "en": "See more",
@@ -98,7 +98,7 @@ JSON.stringify(languages);
         },
         "OurAllies": {
             "en": "Our<br>Allies",
-            "es": "Nuestros Aliados"
+            "es": "Nuestros<br/>Aliados"
         },
         "InsMail": {
             "en": "Institutional Mail",
@@ -164,10 +164,10 @@ JSON.stringify(languages);
 
     function updateLang() {
         var currentLang = localStorage.getItem("active-lang") || "en";
-        
+
         $(".language-selector-item").removeClass("active");
         $("[data-lang-key='" + currentLang + "']").addClass("active");
-        
+
         $("[data-text-key]").each(function (index, item) {
             var $item = $(item)
             $item.html(languages[$item.data("text-key")][currentLang])

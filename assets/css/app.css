@@ -629,15 +629,20 @@ Contact Sections
   position: absolute;
   top: 1rem;
   right: 1rem;
+  left: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact-section .logo-holder img {
   display: block;
 }
 
+/*
 .contact-section .logo-holder img ~ img {
   margin-top: 1rem;
 }
+*/
 
 /* -----------------------------------------------------------------------------
 Helpers
