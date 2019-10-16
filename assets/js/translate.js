@@ -13,150 +13,150 @@ JSON.stringify(languages);
 var languages = {
     "MenuHome": {
         "en": "Home",
-        "es": ""
+        "es": "Inicio"
     },
     "MenuServices": {
         "en": "Services",
-        "es": ""
+        "es": "Servicios"
     },
     "MenuProjects": {
         "en": "Projects",
-        "es": ""
+        "es": "Proyectos"
     },
     "MenuContact": {
         "en": "Contact",
-        "es": ""
+        "es": "Contacto"
     },
     "HomeSlogan": {
         "en": "Marine and Civil Architectural Solutions",
-        "es": ""
+        "es": "Soluciones arquitectónicas marinas y civiles"
     },
     "AboutUs": {
         "en": "About Us",
-        "es": ""
+        "es": "¿Quiénes somos?"
     },
     "FullService": {
         "en": "FULL SERVICE CONTRACTOR IN MARINE AND CIVIL ARCHITECTURAL SOLUTIONS",
-        "es": ""
+        "es": "Empresa constructora que brinda soluciones arquitectónicas para la industria marítima y civil"
     },
     "TextAbout": {
-        "en": "V&amp;CH Global is a firm based in Lima, Peru that provides innovative solutions, qualitymaterials and services to build new spaces and refurbish cruises and on-land projects.",
-        "es": ""
+        "en": "V&CH Global is a firm based in Lima, Peru that provides innovative solutions, qualitymaterials and services to build new spaces and refurbish cruises and on-land projects.",
+        "es": "V&CH Global es una empresa con sede en Lima - Perú, que ofrece soluciones innovadoras, suministro de materiales y servicios de calidad para construir nuevos proyectos y renovar espacios en barcos de cruceros y edificaciones civiles."
     },
     "TextG": {
         "en": "Globalization",
-        "es": ""
+        "es": "Globalización"
     },
     "TextD": {
         "en": "Design",
-        "es": ""
+        "es": "Diseño"
     },
     "TextT": {
         "en": "Team",
-        "es": ""
+        "es": "Equipo"
     },
     "TextP": {
         "en": "Puntuality",
-        "es": ""
+        "es": "Puntualidad"
     },
     "OurServices": {
         "en": "Our services",
-        "es": ""
+        "es": "Nuestros Servicios"
     },
     "ServicesDe": {
         "en": "Design and building",
-        "es": ""
+        "es": "Diseño y construcción"
     },
     "ServicesCu": {
         "en": "Customize manufacturing",
-        "es": ""
+        "es": "Manufactura personalizada"
     },
     "ServicesPro": {
         "en": "Procurement",
-        "es": ""
+        "es": "Compras y adquisiciones"
     },
     "ServicesTu": {
         "en": "Turn-Key Services",
-        "es": ""
+        "es": "Servicios integrales"
     },
     "ServicesIm": {
         "en": "Import/Export",
-        "es": ""
+        "es": "Importación / exportación de materiales"
     },
     "ServicesCo": {
         "en": "Consulting",
-        "es": ""
+        "es": "Consultoría"
     },
     "OurProjects": {
         "en": "Our projects",
-        "es": ""
+        "es": "Nuestros Proyectos"
     },
     "LeerMas": {
-        "en": "See more &gt;&gt;",
-        "es": ""
+        "en": "See more",
+        "es": "Ver más"
     },
     "OurAllies": {
         "en": "Our<br>Allies",
-        "es": ""
+        "es": "Nuestros Aliados"
     },
     "InsMail": {
         "en": "Institutional Mail",
-        "es": ""
+        "es": "Correo institucional"
     },
     "phone": {
         "en": "<i class=\"fas fa-fw fa-phone-alt\"></i>Phone",
-        "es": ""
+        "es": "Celular"
     },
     "VisitPopup": {
         "en": "Visit us at CasaCor 2019 until November 03<sup class=\"lower-case\">rd</sup>",
-        "es": ""
+        "es": "Visìtanos en CasaCor 2019 hasta el 3 de noviembre!"
     },
     "Send": {
         "en": "Send",
-        "es": ""
+        "es": "Enviar"
     },
     "TextServicesDe": {
         "en": "Our work begins from the first interaction with the clients to assist in thedevelopingof their ideas providing the best cost-efficient and quality solutions. Our servicesinclude the presentation of the Project General Concept, followed by the elaborationofconstruction documents: Architectural, Engineering, Planning, Procurement,Monitoring,and Delivery of the final product.",
-        "es": ""
+        "es": "Nuestro trabajo comienza desde la primera interacción con los clientes para ayudarlos en el desarrollo de sus ideas proporcionando soluciones costo-eficientes y de mejor calidad. Nuestros servicios incluyen la presentación del Concepto General del Proyecto, seguido de la elaboración de los documentos de construcción: Arquitectura, Ingeniería, Planificación, Procuramiento, Monitoreo hasta la entrega final del producto."
     },
     "TextServicesCu": {
         "en": "Our target is INNOVATION, we focus our work and global experience providingcustomized solutions for the broad spectrum of the Marine and Civil BuildingProjects. Our architectural playground exposes us to assist our clients in achievingtheir challenging requirements with creative ideas.",
-        "es": ""
+        "es": "Nuestro objetivo es la INNOVACIÓN. Enfocamos nuestro trabajo y nuestra experiencia global en soluciones diseñadas a medida para nuestros clientes con referencias de una gran gama de Proyectos Navales y de Edificación Civil. Nuestro escenario arquitectónico nos prepara para asistir a nuestros clientes en sus desafiantes requerimientos con ideas creativas."
     },
     "TextServicesPro": {
         "en": "We provide access to a global network of vendors to find material and services thatare not common in the Latin American market.",
-        "es": ""
+        "es": "Proporcionamos acceso a una red global de proveedores para encontrar materiales y servicios que no son comunes en el mercado latinoamericano."
     },
     "TextServicesTu": {
         "en": "We facilitate installation worldwide, from specialized labor, to turnkey solutionsfrom start to finish using qualified installers in different fields: Ceiling,Flooring, Carpentry, Welding, Painting, Fittings, Coverings, Mechanical Engineering,and more.",
-        "es": ""
+        "es": "Facilitamos instalaciones en cualquier parte del mundo, desde mano de obra especializada, hasta soluciones integrales de principio a fin, utilizando instaladores calificados y certificados en diferentes campos: Techos, Pisos, Carpintería, Soldadura, Pintura, Accesorios, Revestimientos, Ingeniería Mecánica, y más."
     },
     "TextServicesIm": {
         "en": "We provide Logistic Services to import and export merchandize from/to around the World.We have an experienced team working everyday with Vendors and Freight Forwarders who wehave international alliances to meet deadlines and ensure the right handling of goods.",
-        "es": ""
+        "es": "Proporcionamos servicios de logística para la importación y exportación de mercancías desde/hacia cualquier parte del mundo. Contamos con un equipo experimentado que trabaja día a día con Proveedores y Agentes de Carga con los que tenemos alianzas internacionales para cumplir con los plazos de entrega y asegurar el correcto manejo de las mercancías."
     },
     "TextServicesCo": {
         "en": "We count with a team of professionals in the Architecture, Engineering, andManagement field to provide adequate support and advise with different perspectivesto solve problems and improve their business.",
-        "es": ""
+        "es": "Contamos con un equipo de profesionales en el campo de la Arquitectura, Ingeniería y Gestión para brindar el apoyo y asesoramiento adecuado a los clientes que necesitan diferentes perspectivas para resolver problemas y mejorar su negocio.        "
     },
     "ContactUs": {
         "en": "Contact Us",
-        "es": ""
+        "es": "Contáctanos"
     },
     "Company": {
         "en": "Company<input type=\"text\" name=\"company\" class=\"padding-horizontal-2\" required=\"\">",
-        "es": ""
+        "es": "Empresa"
     },
     "Cell": {
         "en": "Cellphone<input type=\"text\" name=\"phone\" class=\"padding-horizontal-2\" required=\"\">",
-        "es": ""
+        "es": "Celular"
     },
     "Message": {
         "en": "Message<textarea name=\"message\" rows=\"5\" class=\"padding-horizontal-2\"></textarea>",
-        "es": ""
+        "es": "Mensaje"
     },
     "Social": {
         "en": "Social networks",
-        "es": ""
+        "es": "Redes Sociales"
     }
 }
