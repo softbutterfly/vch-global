@@ -95,37 +95,36 @@ $(document).ready(function () {
                         "getAreasFromMap": false,
                         "images": [
                             {
-                                // "type": "circle",
                                 "label": "Canada",
                                 "longitude": -117.0727,
                                 "latitude": 62.831
                             },
                             {
-                                // "type": "circle",
                                 "label": "Bahamas",
                                 "longitude": -80.7916,
                                 "latitude": 24.0365
                             },
                             {
-                                // "type": "circle",
+                                "label": "Peru",
+                                "longitude": -77.042793,
+                                "latitude": -12.046374
+                            },
+                            {
+                                "label": "Sydney",
+                                "longitude": 151.209296,
+                                "latitude": -33.868820
+                            },
+                            {
                                 "label": "Spain",
                                 "longitude": -6.4548,
                                 "latitude": 43.4518
                             },
                             {
-                                // "type": "circle",
                                 "label": "Italy",
                                 "longitude": 14.5305,
                                 "latitude": 40.982
                             },
                             {
-                                // "type": "circle",
-                                "label": "Hong Kong",
-                                "longitude": 114.15769,
-                                "latitude": 22.28552
-                            },
-                            {
-                                // "type": "circle",
                                 "label": "Singapore",
                                 "longitude": 103.851959,
                                 "latitude": 1.290270
@@ -146,6 +145,7 @@ $(document).ready(function () {
                     },
 
                     "smallMap": false,
+                    "dragMap": false,
                     "export": false,
                     "chartContainer": {
                         "wheelable": false
@@ -160,6 +160,17 @@ $(document).ready(function () {
                         "event": "positionChanged",
                         "method": updateCustomMarkers
                     }]
+                });
+
+                map.addListener("click", function(event) {
+                    // find out the coordinates of under mouse cursor
+                    var info = event.chart.getDevInfo();
+
+                    // print in console as well
+                    console.log({
+                      "latitude": info.latitude,
+                      "longitude": info.longitude
+                    })
                 });
             }
         }
