@@ -573,9 +573,64 @@ Service Section
 /* -----------------------------------------------------------------------------
 Project Sections
 ----------------------------------------------------------------------------- */
+.projects-section .map-wrapper {
+  position: relative;
+}
+
 .projects-section #projects-map {
   height: 400px;
 }
+
+.projects-section #projects-popup {
+  position: absolute;
+  transform: translate(-50%, 10px);
+}
+
+.projects-section #projects-popup-content {
+  position: relative;
+  border: 1px solid #1e1d3a;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  height: 140px;
+}
+
+.projects-section #projects-popup-content .projects-popup-arrow-top {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #1e1d3a transparent;
+}
+
+.projects-section #projects-popup-content .projects-popup-arrow-right {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 1px);
+  width: 0;
+  height: 0;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  border-left: 20px solid #1e1d3a;
+}
+
+.projects-section #projects-popup-content .projects-popup-text {
+  position: relative;
+  padding: 0.5rem;
+  white-space: nowrap;
+}
+
+.projects-section #projects-popup-content .projects-popup-image {
+  width: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 .projects-section .map-marker {
   height: 8px;
@@ -586,7 +641,7 @@ Project Sections
   overflow: show;
 }
 
-.projects-section .map-marker::after {
+.projects-section .map-marker.map-pulsar::after {
   content: "";
   height: 8px;
   width: 8px;
