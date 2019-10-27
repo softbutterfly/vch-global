@@ -588,11 +588,13 @@ Project Sections
 
 .projects-section #projects-popup-content {
   position: relative;
-  border: 1px solid #1e1d3a;
+  /*border: 1px solid #1e1d3a;*/
   border-radius: 2px;
   display: flex;
   flex-direction: row;
   height: 140px;
+  box-shadow: 5px 10px 8px #888888;
+  font-weight: bold;
 }
 
 .projects-section #projects-popup-content .projects-popup-arrow-top {
@@ -615,7 +617,7 @@ Project Sections
   height: 0;
   border-top: 70px solid transparent;
   border-bottom: 70px solid transparent;
-  border-left: 20px solid #1e1d3a;
+  border-left: 20px solid #ffffff;
 }
 
 .projects-section #projects-popup-content .projects-popup-text {
