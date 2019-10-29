@@ -60,6 +60,10 @@ JSON.stringify(languages);
             "en": "Punctuality",
             "es": "Puntualidad"
         },
+        "TextCre": {
+            "en": "Creativity",
+            "es": "Creatividad"
+        },
         "OurServices": {
             "en": "Our<br/>services",
             "es": "Nuestros<br/>Servicios"
@@ -155,6 +159,30 @@ JSON.stringify(languages);
         "Message": {
             "en": "Message<textarea name=\"message\" rows=\"5\" class=\"padding-horizontal-2\"></textarea>",
             "es": "Mensaje<textarea name=\"message\" rows=\"5\" class=\"padding-horizontal-2\"></textarea>",
+        },
+        "May": {
+            "en": "May",
+            "es": " Mayo"
+        },
+        "April": {
+            "en": "April",
+            "es": "Abril"
+        },
+        "March": {
+            "en": "March",
+            "es": "Marzo"
+        },
+        "January": {
+            "en": "January",
+            "es": "Enero"
+        },
+        "February": {
+            "en": "February",
+            "es": "Febrero"
+        },
+        "October": {
+            "en": "October",
+            "es": "Octubre"
         },
         "Social": {
             "en": "Social networks",
