@@ -4,6 +4,7 @@ $(document).ready(function () {
         $('.lower-cut').attr('style', 'border-left-width:' + $('.upper-cut').parent().width() + 'px')
     }
 
+    /*
     function updateNavbarBackground() {
         var hasNavigationActive = $('#navigation-bar').attr('style') !== "display: none;" && Foundation.MediaQuery.current === 'small'
         if (window.scrollY > 100) {
@@ -26,6 +27,7 @@ $(document).ready(function () {
             }
         }
     }
+    */
 
     function makeMap() {
         if (document.getElementById('projects-map')) {
@@ -82,7 +84,7 @@ $(document).ready(function () {
                             var $popup = $("#projects-popup");
                             $popup.addClass("hide");
 
-                            if(project !== null) {
+                            if (project !== null) {
                                 project = JSON.parse(project);
                                 $popup.removeClass("hide");
                                 $popup.css("top", this.style.top);
@@ -247,7 +249,7 @@ $(document).ready(function () {
                         "method": updateCustomMarkers,
                     }, {
                         "event": "clickMapObject",
-                        "method": function( e ) {
+                        "method": function (e) {
                             console.log(e)
                         },
                     }]
@@ -279,15 +281,15 @@ $(document).ready(function () {
         autoplayHoverPause: true,
     });
 
-    $('.menu-toggle').on('click', updateNavbarBackgroundOnMenuToggle);
+    // $('.menu-toggle').on('click', updateNavbarBackgroundOnMenuToggle);
 
     makeMap();
     updateCutSize();
-    updateNavbarBackground();
+    // updateNavbarBackground();
 
     window.addEventListener('resize', updateCutSize, false);
-    window.addEventListener('resize', updateNavbarBackground, false);
-    window.addEventListener('scroll', updateNavbarBackground, false);
+    // window.addEventListener('resize', updateNavbarBackground, false);
+    // window.addEventListener('scroll', updateNavbarBackground, false);
 
     var casacorLastDay = new Date(2019, 10, 03);
     var today = new Date();

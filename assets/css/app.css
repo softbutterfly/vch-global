@@ -112,18 +112,27 @@ h6 {
 
 .page {
   position: relative;
-  padding-top: 40px;
+  /* padding-top: 40px; */
 }
 
 .page-header {
-  position: fixed;
+  position: relative;
   right: 0;
   left: 0;
   top: 0;
   z-index: 100;
   background-color: transparent;
+  /*
   border-bottom: 5px solid transparent;
   transition: all 0.5s ease-in-out;
+  */
+  height: 72px;
+}
+
+@media (min-width: 40em) {
+  .page-header {
+    height: 88px;
+  }
 }
 
 .page-header .status-bar {
@@ -166,9 +175,14 @@ h6 {
   color: #ffffff;
 }
 
-.page-header.active {
+.page-header .nav-bar {
   background-color: #1e1d3a;
   border-bottom: 8px solid #387a77;
+  transition: all 0.5s ease-in-out;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 .page-header.active.hide-status-bar .status-bar {
@@ -415,7 +429,7 @@ Header Section
 ----------------------------------------------------------------------------- */
 .header-section {
   padding: 0;
-  height: 400px;
+  height: 350px;
 }
 
 .header-text {
@@ -446,7 +460,7 @@ Header Section
 }
 
 .header-carousel.owl-carousel .owl-dots {
-  margin: 0!important;
+  margin: 0 !important;
   position: absolute;
   right: 0;
   width: 40px;
@@ -459,7 +473,7 @@ Header Section
 }
 
 .header-banner {
-  height: 400px;
+  height: 350px;
 }
 /* -----------------------------------------------------------------------------
 About Section
@@ -487,12 +501,12 @@ Paralax Section
 .parallax-section {
   height: 80vh;
   transition: background-image 0.5s ease-in-out;
-  background-image: url('../images/fondo_paralax_1.jpg');
+  background-image: url("../images/fondo_paralax_1.jpg");
   background-attachment: fixed;
 }
 
 .parallax-section:hover {
-  background-image: url('../images/fondo_paralax_2.jpg');
+  background-image: url("../images/fondo_paralax_2.jpg");
 }
 
 /* -----------------------------------------------------------------------------
@@ -633,7 +647,6 @@ Project Sections
   background-repeat: no-repeat;
 }
 
-
 .projects-section .map-marker {
   height: 8px;
   width: 8px;
@@ -773,5 +786,5 @@ Helpers
 }
 
 a[title="Interactive JavaScript maps"] {
-  display: none!important;
+  display: none !important;
 }
