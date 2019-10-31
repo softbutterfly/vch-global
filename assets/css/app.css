@@ -450,12 +450,12 @@ Header Section
 }
 
 .header-section.section-carousel {
-  height: calc(100vh + 43px);
+  height: 100vh;
 }
 
 .header-carousel.owl-carousel .item {
   width: 100%;
-  height: calc(100vh + 43px);
+  height: 100vh;
   min-height: 200px;
 }
 

@@ -2,8 +2,23 @@ $(document).ready(function () {
     function updateCutSize() {
         $('.upper-cut').attr('style', 'border-right-width:' + $('.upper-cut').parent().width() + 'px')
         $('.lower-cut').attr('style', 'border-left-width:' + $('.upper-cut').parent().width() + 'px')
-    }
+    };
 
+    function updateHeaderPicutre() {
+        if ($('.header-picture').length > 0) {
+            if (window.innerWidth >= 400) {
+                $('.header-picture').css(
+                    'background-image',
+                    'url("./assets/images/home.png")'
+                )
+            } else {
+                $('.header-picture').css(
+                    'background-image',
+                    'url("./assets/images/mobile_home.jpg")'
+                )
+            }
+        }
+    };
     /*
     function updateNavbarBackground() {
         var hasNavigationActive = $('#navigation-bar').attr('style') !== "display: none;" && Foundation.MediaQuery.current === 'small'
@@ -285,9 +300,12 @@ $(document).ready(function () {
 
     makeMap();
     updateCutSize();
+    updateHeaderPicutre();
     // updateNavbarBackground();
 
     window.addEventListener('resize', updateCutSize, false);
+    window.addEventListener('resize', updateHeaderPicutre, false);
+    // window.addEventListener('resize', updateNavbarBackground, false);
     // window.addEventListener('resize', updateNavbarBackground, false);
     // window.addEventListener('scroll', updateNavbarBackground, false);
 
