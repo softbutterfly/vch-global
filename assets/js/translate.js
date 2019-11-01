@@ -188,14 +188,12 @@ JSON.stringify(languages);
             "en": "Social networks",
             "es": "Redes Sociales"
         }
-    }
+    };
 
     function updateLang() {
         var currentLang = localStorage.getItem("active-lang") || "en";
-
-        $(".language-selector-item").removeClass("active");
-        $("[data-lang-key='" + currentLang + "']").addClass("active");
-
+        $(".language-selector-item").removeClass("hide");
+        $("[data-lang-key='" + currentLang + "']").addClass("hide");
         $("[data-text-key]").each(function (index, item) {
             var $item = $(item)
             $item.html(languages[$item.data("text-key")][currentLang])
@@ -207,8 +205,8 @@ JSON.stringify(languages);
         var lang = $item.data("lang-key");
         var currentLang = localStorage.getItem("active-lang") || "en";
         if (currentLang !== lang) {
-            $(".language-selector-item").removeClass("active");
-            $item.addClass("active");
+            $(".language-selector-item").removeClass("hide");
+            $item.addClass("hide");
             localStorage.setItem("active-lang", lang);
             updateLang();
         }
