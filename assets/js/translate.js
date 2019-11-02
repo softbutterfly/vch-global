@@ -198,6 +198,14 @@ JSON.stringify(languages);
             var $item = $(item)
             $item.html(languages[$item.data("text-key")][currentLang])
         });
+        if (window.makeMap !== undefined && window.mapChart !== undefined) {
+            window.mapChart.clear();
+            window.makeMap();
+            if (window.SelectedMapObject !== undefined) {
+                $(window.SelectedMapObject).click();
+            };
+        }
+
     };
 
     $(".language-selector-item").on("click", function () {

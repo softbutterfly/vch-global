@@ -19,36 +19,18 @@ $(document).ready(function () {
             }
         }
     };
-    /*
-    function updateNavbarBackground() {
-        var hasNavigationActive = $('#navigation-bar').attr('style') !== "display: none;" && Foundation.MediaQuery.current === 'small'
-        if (window.scrollY > 100) {
-            $('.page-header').addClass('active');
-            $('.page-header').addClass('hide-status-bar');
-        } else {
-            if (!hasNavigationActive) {
-                $('.page-header').removeClass('active');
-            }
-            $('.page-header').removeClass('hide-status-bar');
-        }
-    }
-
-    function updateNavbarBackgroundOnMenuToggle() {
-        if (window.scrollY <= 100) {
-            if ($('.page-header').hasClass('active')) {
-                $('.page-header').removeClass('active');
-            } else {
-                $('.page-header').addClass('active');
-            }
-        }
-    }
-    */
 
     function makeMap() {
         if (document.getElementById('projects-map')) {
             function createCustomMarker(image) {
                 // Create chart container
                 var holder = document.createElement("div");
+                var currentLang = localStorage.getItem("active-lang") || "en";
+                try {
+                    image.label = image.labelTranslations[currentLang];
+                } catch (error) {
+                    return null;
+                };
                 holder.id = image.label;
                 holder.title = image.label;
                 holder.classList.add('map-marker');
@@ -61,7 +43,7 @@ $(document).ready(function () {
                 image.chart.chartDiv.appendChild(holder);
 
                 return holder;
-            }
+            };
 
             function updateCustomMarkers(event) {
                 // get map object
@@ -95,8 +77,14 @@ $(document).ready(function () {
                     image.externalElement.addEventListener(
                         'click',
                         function () {
-                            var project = this.getAttribute('data-project', null)
-                            var $popup = $("#projects-popup");
+                            window.SelectedMapObject = this;
+
+                            var project = this.getAttribute('data-project', null);
+                            var popup = document.getElementById('projects-popup');
+                            var $popup = $(popup);
+
+                            var currentLang = localStorage.getItem("active-lang") || "en";
+
                             $popup.addClass("hide");
 
                             if (project !== null) {
@@ -105,137 +93,186 @@ $(document).ready(function () {
                                 $popup.css("top", this.style.top);
                                 $popup.css("left", this.style.left);
 
+
                                 $("#projects-popup .projects-popup-image").css("backgroundImage", "url(" + project.image + ")");
                                 $("#projects-popup .cruise").text(project.cruise);
-                                $("#projects-popup .place").text(project.place);
-                                $("#projects-popup .date").text(project.year);
+                                $("#projects-popup .place").text(project.place[currentLang]);
+                                $("#projects-popup .date").text(project.year[currentLang]);
                                 $("#projects-popup .vch").text(project.vch);
+
+                                var viewportOffset = popup.getBoundingClientRect();
+                                var left = viewportOffset.left;
+                                var right = viewportOffset.right;
+                                var width = popup.clientWidth;
+
+                                if (left < 0 && right > 0) {
+                                    $popup.css("left", parseFloat(this.style.left) - left + 10 + "px");
+                                    $('.projects-popup-arrow-top').css("left", 0.5 * width + left - 10 + "px");
+                                }
+                                else if (left > 0 && right < 0) {
+                                    $popup.css("left", parseFloat(this.style.left) + left - 10 + "px");
+                                    $('.projects-popup-arrow-top').css("left", 0.5 * width - left + 10 + "px");
+                                }
                             }
                         }
                     );
+
+                    if (image.selected && window.SelectedMapObject === undefined) {
+                        $(image.externalElement).click();
+                    }
                 }
-            }
+            };
+
+            var dataProvider = {
+                "map": "worldLow",
+                "getAreasFromMap": false,
+                "images": [
+                    {
+                        "label": "Canada",
+                        "labelTranslations": {
+                            "en": "Canada",
+                            "es": "Canadá"
+                        },
+                        "longitude": -117.0727,
+                        "latitude": 62.831,
+                        "project": {
+                            "year": {
+                                "en": "2018 - October",
+                                "es": "2018 - Octubre"
+                            },
+                            "cruise": "Ruby Princess",
+                            "place": {
+                                "en": "Victoria, Canada.",
+                                "es": "Victoria, Canadá."
+                            },
+                            "vch": "V&CH Global – Marine",
+                            "image": "./assets/images/project-canada.jpg"
+                        }
+                    },
+                    {
+                        "label": "Bahamas",
+                        "labelTranslations": {
+                            "en": "Bahamas",
+                            "es": "Bahamas"
+                        },
+                        "longitude": -80.7916,
+                        "latitude": 24.0365,
+                        "project": {
+                            "year": {
+                                "en": "2019 - February",
+                                "es": "2019 - Febrero"
+                            },
+                            "cruise": "Empress of the Seas",
+                            "place": {
+                                "en": "Freeport, Grand Bahamas.",
+                                "es": "Freeport, Grand Bahamas."
+                            },
+                            "vch": "V&CH Global – Marine",
+                            "image": "./assets/images/project-bahamas.jpg"
+                        }
+                    },
+                    {
+                        "label": "Peru",
+                        "labelTranslations": {
+                            "en": "Peru",
+                            "es": "Perú"
+                        },
+                        "longitude": -77.042793,
+                        "latitude": -12.046374,
+                        "project": null
+                    },
+                    {
+                        "label": "Sydney",
+                        "labelTranslations": {
+                            "en": "Sydney",
+                            "es": "Sídney"
+                        },
+                        "longitude": 151.209296,
+                        "latitude": -33.868820,
+                        "project": null
+                    },
+                    {
+                        "label": "Spain",
+                        "labelTranslations": {
+                            "en": "Spain",
+                            "es": "España"
+                        },
+                        "longitude": -6.4548,
+                        "latitude": 43.4518,
+                        "project": null
+                    },
+                    {
+                        "label": "Italy",
+                        "labelTranslations": {
+                            "en": "Italy",
+                            "es": "Italia"
+                        },
+                        "longitude": 14.5305,
+                        "latitude": 40.982,
+                        "project": null
+                    },
+                    {
+                        "label": "Singapore",
+                        "labelTranslations": {
+                            "en": "Singapore",
+                            "es": "Singapur"
+                        },
+                        "selected": true,
+                        "longitude": 103.851959,
+                        "latitude": 1.290270,
+                        "project": {
+                            "year": {
+                                "en": "2019 - January",
+                                "es": "2019 - Enero"
+                            },
+                            "cruise": "Diamond Princess",
+                            "place": {
+                                "en": "Singapore",
+                                "es": "Singapur"
+                            },
+                            "vch": "V&CH Global – Marine",
+                            "image": "./assets/images/project-singapore.jpg"
+                        }
+                    },
+                    {
+                        "label": "USA",
+                        "labelTranslations": {
+                            "en": "USA",
+                            "es": "USA"
+                        },
+                        "longitude": -122.679565,
+                        "latitude": 45.512794,
+                        "project": {
+                            "year": {
+                                "en": "2019 - March",
+                                "es": "2019 - Marzo"
+                            },
+                            "cruise": "Grand Princess",
+                            "place": {
+                                "en": "Portland, USA.",
+                                "es": "Portland, USA."
+                            },
+                            "vch": "V&CH Global – Marine",
+                            "image": "./assets/images/project-usa.jpg"
+                        }
+                    }
+                ]
+            };
 
             if (window.AmCharts) {
+                var currentLang = localStorage.getItem("active-lang") || "en";
+
+                for (var i = 0; i < dataProvider.images.length; i++) {
+                    var label = dataProvider.images[i].labelTranslations[currentLang];
+                    dataProvider.images[i].label = labelTranslations = label;
+                };
+
                 var map = AmCharts.makeChart("projects-map", {
                     "type": "map",
                     "theme": "light",
                     "projection": "miller",
 
-                    "dataProvider": {
-                        "map": "worldLow",
-                        "getAreasFromMap": false,
-                        "images": [
-                            {
-                                "label": "Canada",
-                                "longitude": -117.0727,
-                                "latitude": 62.831,
-                                "project": {
-                                    "year": "2018 - October",
-                                    "cruise": "Ruby Princess",
-                                    "place": "Victoria, Canada.",
-                                    "vch": "V&CH Global – Marine",
-                                    "image": "./assets/images/project-canada.jpg"
-                                }
-                            },
-                            {
-                                "label": "Bahamas",
-                                "longitude": -80.7916,
-                                "latitude": 24.0365,
-                                "project": {
-                                    "year": "2019 - February",
-                                    "cruise": "Empress of the Seas",
-                                    "place": "Freeport, Grand Bahamas.",
-                                    "vch": "V&CH Global – Marine",
-                                    "image": "./assets/images/project-bahamas.jpg"
-                                }
-                            },
-                            {
-                                "label": "Peru",
-                                "longitude": -77.042793,
-                                "latitude": -12.046374,
-                                "project": null
-                                /*
-                                {
-                                    "year": "2018 - October",
-                                    "cruise": "Ruby Princess",
-                                    "place": "Victoria, Canada.",
-                                    "vch": "V&CH Global – Marine",
-                                    "image": "./assets/images/project-usa.jpg"
-                                }
-                                */
-                            },
-                            {
-                                "label": "Sydney",
-                                "longitude": 151.209296,
-                                "latitude": -33.868820,
-                                "project": null
-                                /*
-                                {
-                                    "year": "2018 - October",
-                                    "cruise": "Ruby Princess",
-                                    "place": "Victoria, Canada.",
-                                    "vch": "V&CH Global – Marine",
-                                    "image": "./assets/images/project-usa.jpg"
-                                }
-                                */
-                            },
-                            {
-                                "label": "Spain",
-                                "longitude": -6.4548,
-                                "latitude": 43.4518,
-                                "project": null
-                                /*
-                                {
-                                    "year": "2018 - October",
-                                    "cruise": "Ruby Princess",
-                                    "place": "Victoria, Canada.",
-                                    "vch": "V&CH Global – Marine",
-                                    "image": "./assets/images/project-usa.jpg"
-                                }
-                                */
-                            },
-                            {
-                                "label": "Italy",
-                                "longitude": 14.5305,
-                                "latitude": 40.982,
-                                "project": null
-                                /*
-                                {
-                                    "year": "2018 - October",
-                                    "cruise": "Ruby Princess",
-                                    "place": "Victoria, Canada.",
-                                    "vch": "V&CH Global – Marine",
-                                    "image": "./assets/images/project-usa.jpg"
-                                }
-                                */
-                            },
-                            {
-                                "label": "Singapore",
-                                "longitude": 103.851959,
-                                "latitude": 1.290270,
-                                "project": {
-                                    "year": "2019 - January",
-                                    "cruise": "Diamond Princess",
-                                    "place": "Singapore",
-                                    "vch": "V&CH Global – Marine",
-                                    "image": "./assets/images/project-singapore.jpg"
-                                }
-                            },
-                            {
-                                "label": "USA",
-                                "longitude": -122.679565,
-                                "latitude": 45.512794,
-                                "project": {
-                                    "year": "2019 - March",
-                                    "cruise": "Grand Princess",
-                                    "place": "Portland, USA.",
-                                    "vch": "V&CH Global – Marine",
-                                    "image": "./assets/images/project-usa.jpg"
-                                }
-                            }
-                        ]
-                    },
+                    "dataProvider": dataProvider,
                     "areasSettings": {
                         "unlistedAreasAlpha": 1,
                         "unlistedAreasColor": "#ffffff",
@@ -259,33 +296,26 @@ $(document).ready(function () {
                     },
                     "mouseWheelZoomEnabled": false,
                     "zoomOnDoubleClick": false,
-                    "listeners": [{
-                        "event": "positionChanged",
-                        "method": updateCustomMarkers,
-                    }, {
-                        "event": "clickMapObject",
-                        "method": function (e) {
-                            console.log(e)
-                        },
-                    }]
+                    "listeners": [
+                        {
+                            "event": "dataUpdated",
+                            "method": updateCustomMarkers,
+                        }, {
+                            "event": "positionChanged",
+                            "method": updateCustomMarkers,
+                        }, {
+                            "event": "clickMapObject",
+                            "method": function (e) {
+                                console.log(e)
+                            },
+                        }]
                 });
 
-
-                /*
-                map.addListener("click", function(event) {
-                    // find out the coordinates of under mouse cursor
-                    var info = event.chart.getDevInfo();
-
-                    // print in console as well
-                    console.log({
-                      "latitude": info.latitude,
-                      "longitude": info.longitude
-                    })
-                });
-                */
+                window.mapChart = map;
             }
         }
-    }
+    };
+    window.makeMap = window.makeMap || makeMap;
 
     $(document).foundation();
 
@@ -296,22 +326,17 @@ $(document).ready(function () {
         autoplayHoverPause: true,
     });
 
-    // $('.menu-toggle').on('click', updateNavbarBackgroundOnMenuToggle);
-
     makeMap();
     updateCutSize();
     updateHeaderPicutre();
-    // updateNavbarBackground();
 
     window.addEventListener('resize', updateCutSize, false);
     window.addEventListener('resize', updateHeaderPicutre, false);
-    // window.addEventListener('resize', updateNavbarBackground, false);
-    // window.addEventListener('resize', updateNavbarBackground, false);
-    // window.addEventListener('scroll', updateNavbarBackground, false);
 
     var casacorLastDay = new Date(2019, 10, 03);
     var today = new Date();
     if (today <= casacorLastDay) {
         $('#casacor-modal').length && $('#casacor-modal').foundation('open');
-    }
+    };
+
 })
